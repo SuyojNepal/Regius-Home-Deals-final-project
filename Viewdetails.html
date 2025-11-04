@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Details | Regius Home Deals</title>
+  <link rel="icon" href="logo2.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<style>
+  /* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #393E46;
+}
+
+header {
+  background: #222831;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+/* Details Card */
+.details-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-image {
+  flex: 1 1 50%;
+  min-width: 300px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-content {
+  flex: 1 1 50%;
+  padding: 30px;
+}
+
+.details-content h1 {
+  font-size: 28px;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 24px;
+  color: #27ae60;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.features {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.features li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #002f5f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details-card {
+    flex-direction: column;
+  }
+
+  .details-image,
+  .details-content {
+    flex: 1 1 100%;
+  }
+
+  .details-content {
+    padding: 20px;
+  }
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #EEEEEE;
+  color: #393E46;
+  margin-top: 2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.footer-bottom a {
+  color: #94a3b8;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #38bdf8;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 60px;
+  background-color: #0d1224;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  max-width: 300px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-links a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 6px 0;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+.footer-contact {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+</style>
+<body>
+
+  <header>
+    <div class="logo">🏠 Regius Home Deals</div>
+  </header>
+
+  <main class="container">
+    <div class="details-card">
+      <div class="details-image">
+        <img src="Modern Family Home.jpg" alt="Modern House">
+      </div>
+      <div class="details-content">
+        <h1>Modern Family Home</h1>
+        <p class="price">NPR 1.5 Crore</p>
+        <p class="location">📍Kathmandu</p>
+        <p class="description">
+          This beautifully designed family home features 3 bedrooms, 2 bathrooms, a spacious living area,
+          and a modern kitchen. Located in a peaceful neighborhood, it's the perfect place to call home.
+        </p>
+        <ul class="features">
+          <li>✅ 3 Bedrooms</li>
+          <li>✅ 2 Bathrooms</li>
+          <li>✅ 1 Kitchen & Dining</li>
+          <li>✅ Garden & Garage</li>
+        </ul>
+        <a href="cart.html" class="btn">Buy</a>
+        <a href="Wishlist.html" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="logo2.png" alt="Logo" height="200px" style="margin-bottom: 20px; padding: 30px;">
+        </div>
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <div class="footer-description">
+            Regius Home Deals brings you the best real estate opportunities — from affordable homes to premium
+            investments. Discover trusted listings, expert insights, and unbeatable deals for your next dream property.
+            Friendly & Inviting Find your perfect home with Regius Home Deals! We connect you with verified listings, exclusive property deals, and the guidance you need to make confident real estate decisions.
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-column">
+            <div class="footer-title">Quick Links</div>
+            <div class="footer-links">
+                <a href="#">Regius Home Deals for business</a>
+                <a href="#">Add your business</a>
+                <a href="#">Advertise on Regius Home Deals</a>
+            </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+            <div class="footer-title">Contact Information</div>
+            <div class="footer-contact">
+                📍 Kathmandu, Nepal<br>
+                ✉️ supportRegiusHomeDeals.com<br>
+                📞 +977-1234567890<br>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">|
+        <a href="Aboutus.html">About Us</a> |
+        <a href="Privacy Policy.html">Privacy Policy</a> |
+        <a href="contact.html">Contact Us</a>|
+        <a href="Services.html">Service</a> |
+    </div>
+  <p>&copy; 2025 Home Deals. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

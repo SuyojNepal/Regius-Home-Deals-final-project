@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Regius Home Deals</title>
+  <link rel="icon" href="logo2.png" type="image/x-icon" />
+
+</head>
+<style>
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #393E46;
+}
+
+header {
+  background: #222831;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: left;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    float: right;
+    align-items: center;
+    padding: 10px;
+    width: 100;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+    color: #00ADB5;
+  }
+
+  /* Cart Icon */
+  nav ul i.fa-cart-plus {
+    font-size: 18px;
+    color: #00ADB5;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  nav ul i.fa-cart-plus:hover {
+    transform: scale(1.2);
+  }
+
+  /* Main Content */
+  main.container {
+    padding: 20px;
+  }
+
+  h1,
+  h2 {
+    color: #0066cc;
+  }
+
+  .about,
+  .mission,
+  .vision,
+  .team {
+    margin-bottom: 40px;
+  }
+
+  .about p,
+  .mission p,
+  .vision p,
+  .team p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .team-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .team-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .team-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #EEEEEE;
+    color: #393E46;
+    margin-top: 2rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #1e293b;
+    font-size: 14px;
+    color: #64748b;
+  }
+
+  .footer-bottom a {
+    color: #94a3b8;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+    color: #38bdf8;
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 60px;
+    background-color: #0d1224;
+    border-top: 1px solid #1e293b;
+  }
+
+  .footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  .footer-description {
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .footer-links a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    margin: 6px 0;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: #38bdf8;
+  }
+
+  .footer-contact {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #94a3b8;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #cbd5e1;
+    text-decoration: none;
+  }
+
+  .ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #00ADB5;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  .ticker {
+    display: inline-block;
+    white-space: nowrap;
+    animation: ticker-scroll 15s linear infinite;
+  }
+
+  @keyframes ticker-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .ticker-item {
+    display: inline-block;
+    padding: 0 20px;
+  }
+
+  .ticker-item:not(:last-child)::after {
+    content: '|';
+    margin-left: 20px;
+    color: #00ADB5;
+  }
+</style>
+
+<body>
+
+  <header>
+    <div class="logo">🏠 Regius Home Deals</div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Listings.html">Listings</a></li>
+        <li><a href="Aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html"><img src="Cart.png" alt="" width="30px" height="30px"></a></li>
+        <i class="fa-sharp fa-solid fa-cart-plus"></i>
+        <li><a href="Wishlist.html"><img src="wishlist.png" alt="" width="30px" height="30px"></a></li>
+        <i class="fa-sharp fa-solid fa-heart"></i>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="about">
+      <img src="about us.png" alt="Regius Home Deals" width="300px" height="300px"
+        style="float: left; margin-right: 20px; margin-bottom: 20px;">
+      <h1>About Us</h1>
+      <p><strong>Regius Home Deals</strong> About Us
+
+        Welcome to Regius Home Deals, your trusted destination for exceptional home solutions at unbeatable value.
+        We believe that everyone deserves a beautiful, comfortable, and affordable home — and we’re here to make that
+        possible.
+
+        At Regius Home Deals, we specialize in offering a curated selection of quality products and services that
+        elevate your living space without stretching your budget. From modern furniture and décor to smart home
+        essentials and exclusive property deals, we bring together the best in design, function, and price.
+
+        Our mission is simple: to help you create your dream home with confidence and convenience.
+        We partner with trusted brands and suppliers, ensuring every product we feature meets our standards of
+        durability, style, and value.</p>
+
+      With Regius Home Deals, you can expect:
+
+      🏠 Quality You Can Trust – Only top-rated, verified home products and services.
+
+      💰 Exclusive Savings – Premium deals designed to fit your lifestyle and budget.
+
+      💡 Smart Choices – Expert guidance to help you make informed home decisions.
+
+      Join thousands of happy homeowners who have discovered smarter ways to save and style their homes with Regius Home
+      Deals.
+      Your dream home starts here.</p>
+
+      <p>Founded with a mission to transform real estate through technology, Regius is passionate about helping
+        individuals and families find their dream home, and enabling businesses to grow through commercial spaces.</p>
+
+      <p>Whether you're a first-time buyer or an experienced investor, Regius offers reliable, user-friendly tools to
+        help you make smart decisions — all from the comfort of your device.</p>
+    </section>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>To empower buyers, sellers, and agents through innovation, trust, and seamless real estate experiences.</p>
+    </section>
+
+    <section class="vision">
+      <h2>Our Vision</h2>
+      <p>To become Nepal’s most reliable and customer-centric real estate platform, where every user feels confident and
+        secure in their journey.</p>
+    </section>
+
+    <section class="team">
+      <h2>Meet the Founder</h2>
+      <div class="team-card">
+        <img src="logo2.png" alt="Regius Home Deals" />
+        <div>
+          <h3>Regius Home Deals</h3>
+          <p>Founder & CEO</p>
+          <p>A passionate and dedicated professional known for creativity, leadership, and a deep connection to the
+            digital future of real estate.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="footer-logo">
+        <a href="index.html">
+        <img src="logo2.png" alt="Logo" height="200px" style="margin-bottom: 20px; padding: 30px;"></a>
+      </div>
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <div class="footer-description">
+          Regius Home Deals brings you the best real estate opportunities — from affordable homes to premium
+          investments. Discover trusted listings, expert insights, and unbeatable deals for your next dream property.
+          Friendly & Inviting Find your perfect home with Regius Home Deals! We connect you with verified listings, exclusive property deals, and the guidance you need to make confident real estate decisions.
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <div class="footer-title">Quick Links</div>
+        <div class="footer-links">
+          <a href="#">Regius Home Deals for business</a>
+          <a href="#">Add your business</a>
+          <a href="#">Advertise on Regius Home Deals</a>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <div class="footer-title">Contact Information</div>
+        <div class="footer-contact">
+          📍 Kathmandu, Nepal<br>
+          ✉️ supportRegiusHomeDeals.com<br>
+          📞 +977-1234567890<br>
+          <div class="social-icons">
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgT4cuo7TR5MaFfvilMWRid3UhGCGHnD5fJg&s" alt="Facebook" width="30px" height="30px"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6q7Wi-oyGrzlR8Sv_6TPLzJXfloAOB3H4Mw&s" alt="Twitter" width="30px" height="30px"></a>
+            <a href="#"><img src="https://img.freepik.com/premium-photo/instagram-logo_1080029-106.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram" width="30px" height="30px"></a>
+            <a href="#"><img src="https://img.freepik.com/premium-vector/round-linkedin-logo-isolated-white-background_469489-985.jpg?semt=ais_hybrid&w=740&q=80" alt="LinkedIn" width="30px" height="30px"></a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">|
+      <a href="Aboutus.html">About Us</a> |
+      <a href="Privacy Policy.html">Privacy Policy</a> |
+      <a href="contact.html">Contact Us</a>|
+      <a href="Services.html">Service</a> |
+    </div>
+    <p>&copy; 2025 Home Deals. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
